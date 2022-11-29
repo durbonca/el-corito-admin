@@ -13,10 +13,10 @@ const PostCreate = (props) => (
             </FileInput>
             <RichTextInput style={{width: '100%'}} source="body" validate={required()} />
             <DateInput style={{width: '100%'}} source="date_creation" validate={required()} />   
-            {/* <ReferenceArrayInput source="categories" reference="categories">
+            <ReferenceArrayInput source="categories" reference="categories">
                 <AutocompleteArrayInput optionText='title' />            
             </ReferenceArrayInput>
-            <ReferenceArrayInput source="tags" reference="tags">
+            {/* <ReferenceArrayInput source="tags" reference="tags">
                 <AutocompleteArrayInput optionText='title' />            
             </ReferenceArrayInput> */}
         </SimpleForm>
