@@ -1,7 +1,11 @@
 import React from "react";
 import {
   Edit,
-  /* AutocompleteArrayInput, ReferenceArrayInput, NumberInput, UrlField, */
+  /* NumberInput, UrlField, */
+  SelectInput,
+  ReferenceInput,
+  /* AutocompleteArrayInput,
+  ReferenceArrayInput, */
   SimpleForm,
   TextInput,
   DateInput,
@@ -48,12 +52,12 @@ const PostEdit = props => {
           source="date_creation"
           validate={required()}
         />
-        {/* <ReferenceArrayInput source="categories" reference="categories">
-                <AutocompleteArrayInput optionText='title' />            
-            </ReferenceArrayInput>
-            <ReferenceArrayInput source="tags" reference="tags">
-                <AutocompleteArrayInput optionText='title' />            
-            </ReferenceArrayInput> */}
+        <ReferenceInput source="categories" reference="categories">
+          <SelectInput optionText="title" validate={required()} />
+        </ReferenceInput>
+        {/* <ReferenceArrayInput source="tags" reference="tags">
+          <AutocompleteArrayInput optionText="title" debounce={10000} />
+        </ReferenceArrayInput> */}
       </SimpleForm>
     </Edit>
   );

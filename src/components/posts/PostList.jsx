@@ -5,7 +5,8 @@ import {
   TextField,
   /* ImageField, ArrayField, ReferenceField, NumberField, */
   TopToolbar,
-  CreateButton
+  CreateButton,
+  DateField
 } from "react-admin";
 
 const ListActions = () => {
@@ -21,6 +22,7 @@ const PostList = props => {
     <List {...props} title="Ultimas entradas" actions={<ListActions />}>
       <Datagrid rowClick="edit">
         <TextField source="title" />
+        <DateField source="date_creation" />
         {/* <TextField source="descripcion" />
                 <NumberField source="precio" />
                 <ImageField source="file.src" title="file.title" />
