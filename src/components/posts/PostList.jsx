@@ -22,6 +22,7 @@ const PostList = props => {
     <List {...props} title="Ultimas entradas" actions={<ListActions />}>
       <Datagrid rowClick="edit">
         <TextField source="title" />
+        <TextField source="slug" />
         <DateField source="date_creation" />
         {/* <TextField source="descripcion" />
                 <NumberField source="precio" />

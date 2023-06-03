@@ -26,6 +26,11 @@ const PostEdit = props => {
         />
         <TextInput
           style={{ width: "100%" }}
+          source="slug"
+          validate={required()}
+        />
+        <TextInput
+          style={{ width: "100%" }}
           source="url_youtube"
           validate={required()}
         />
